@@ -21,7 +21,7 @@ jobs:
         run: |
           echo "Committed at $(date)" >> daily.txt
           git add daily.txt
-          git commit -m "Auto commit: $(date)"
+          git commit -m "Auto commit: $(date)" || echo "No changes to commit"
 
       - name: Push changes
         env:
